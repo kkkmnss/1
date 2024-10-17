@@ -165,8 +165,8 @@ BYTES_SEND = Counter()
 
 
 class Tools:
-    IP = compile("(?:\d{1,3}\.){3}\d{1,3}")
-    protocolRex = compile('"protocol":(\d+)')
+    IP = re.compile(r"(?:\d{1,3}\.){3}\d{1,3}")
+    protocolRex = re.compile(r'"protocol":(\d+)')
 
     @staticmethod
     def humanbytes(i: int, binary: bool = False, precision: int = 2):
